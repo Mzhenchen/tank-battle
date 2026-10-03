@@ -4,7 +4,7 @@
 
 ## 🎮 在线试玩
 
-GitHub Pages：<https://你的用户名.github.io/tank-battle/>
+GitHub Pages：<https://Mzhenchen.github.io/tank-battle/>
 
 ## ✨ 游戏特性
 
