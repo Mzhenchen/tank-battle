@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>坦克大战 Tank Battle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <div class="sidebar">
+      <h1>坦克大战</h1>
+      <div class="info-panel">
+        <div class="info-item">
+          <span class="label">关卡</span>
+          <span id="level" class="value">1</span>
+        </div>
+        <div class="info-item">
+          <span class="label">得分</span>
+          <span id="score" class="value">0</span>
+        </div>
+        <div class="info-item">
+          <span class="label">生命</span>
+          <span id="lives" class="value">3</span>
+        </div>
+        <div class="info-item">
+          <span class="label">剩余敌人</span>
+          <span id="enemies-left" class="value">0</span>
+        </div>
+      </div>
+      <div class="controls">
+        <h3>操作说明</h3>
+        <p><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 或 方向键 移动</p>
+        <p><kbd>空格</kbd> 或 <kbd>J</kbd> 射击</p>
+        <p><kbd>P</kbd> 暂停 / 继续</p>
+        <p><kbd>M</kbd> 静音</p>
+      </div>
+    </div>
+    <div class="canvas-wrapper">
+      <canvas id="game" width="832" height="608"></canvas>
+      <div id="overlay" class="overlay">
+        <div id="overlay-title" class="overlay-title">坦克大战</div>
+        <div id="overlay-sub" class="overlay-sub">按 回车键 开始游戏</div>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

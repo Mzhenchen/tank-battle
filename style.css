@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1a1a2e;
+  color: #eee;
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.game-container {
+  display: flex;
+  gap: 24px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.sidebar {
+  width: 220px;
+  background: #16213e;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar h1 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e94560;
+  letter-spacing: 4px;
+}
+
+.info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  background: #0f3460;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.info-item .label {
+  color: #a8b2d1;
+  font-size: 14px;
+}
+
+.info-item .value {
+  font-weight: bold;
+  font-size: 18px;
+  color: #ffd460;
+  font-variant-numeric: tabular-nums;
+}
+
+.controls h3 {
+  margin-bottom: 10px;
+  color: #e94560;
+  font-size: 15px;
+}
+
+.controls p {
+  font-size: 13px;
+  color: #a8b2d1;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+kbd {
+  display: inline-block;
+  background: #0f3460;
+  border: 1px solid #3a5a8c;
+  border-radius: 4px;
+  padding: 1px 7px;
+  margin: 0 2px;
+  font-size: 12px;
+  font-family: monospace;
+  color: #ffd460;
+}
+
+.canvas-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+canvas {
+  display: block;
+  background: #000;
+  image-rendering: pixelated;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 25, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #e94560;
+  letter-spacing: 8px;
+  text-shadow: 0 0 20px rgba(233, 69, 96, 0.6);
+}
+
+.overlay-sub {
+  font-size: 18px;
+  color: #a8b2d1;
+  animation: blink 1.2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
